@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farming Services</title>
+
+<style>
+body{
+  background:#0f2027;
+  color:white;
+  font-family:Segoe UI, sans-serif;
+  text-align:center;
+}
+
+h1{margin-top:30px;}
+
+table{
+  margin:30px auto;
+  border-collapse:collapse;
+  width:95%;
+  max-width:1200px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+}
+
+th,td{
+  padding:10px;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+th{background:rgba(255,255,255,0.15);}
+
+a{color:#00e5ff;text-decoration:none;font-weight:bold;}
+
+/* ⭐ Stars */
+
+.stars span{
+  font-size:22px;
+  cursor:pointer;
+  color:#777;
+}
+
+.stars span.active{color:gold;}
+
+/* 💬 Review */
+
+textarea{
+  width:150px;
+  height:45px;
+  border-radius:5px;
+  border:none;
+  padding:4px;
+  resize:none;
+}
+
+button{
+  margin-top:3px;
+  padding:4px 8px;
+  border:none;
+  border-radius:4px;
+  background:#00e5ff;
+  cursor:pointer;
+}
+
+.review-display{
+  font-size:12px;
+  margin-top:4px;
+  color:#ddd;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌾🚜 Farming Services</h1>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Name</th>
+<th>Equipment</th>
+<th>Phone</th>
+<th>Address</th>
+<th>Rating</th>
+<th>Review</th>
+</tr>
+
+<!-- ===== 10 PEOPLE ===== -->
+
+<tr>
+<td>1</td>
+<td>K MAHESH BABU</td>
+<td>Tractor</td>
+<td><a href="tel:1234567890">1234567890</a></td>
+<td>SANKRANTHIPALLI</td>
+<td>
+<div class="stars">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+</td>
+<td>
+<textarea placeholder="Write review"></textarea><br>
+<button onclick="saveReview(this)">Submit</button>
+<div class="review-display"></div>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>RAVI KUMAR</td>
+<td>Harvester</td>
+<td><a href="tel:9876543210">9876543210</a></td>
+<td>VENKATAGIRI</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>SURESH REDDY</td>
+<td>Mini Tractor</td>
+<td><a href="tel:9123456780">9123456780</a></td>
+<td>KOVUR</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>RAJU NAIDU</td>
+<td>Plough Machine</td>
+<td><a href="tel:9012345678">9012345678</a></td>
+<td>BUCHIREDDYPALEM</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>VENKATESH</td>
+<td>Seed Drill</td>
+<td><a href="tel:9988776655">9988776655</a></td>
+<td>ALLUR</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>MOHAN BABU</td>
+<td>Rotavator</td>
+<td><a href="tel:9090909090">9090909090</a></td>
+<td>INDUKURUPETA</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>SRINIVAS</td>
+<td>Water Tanker</td>
+<td><a href="tel:9345678901">9345678901</a></td>
+<td>NELLORE RURAL</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>PRASAD</td>
+<td>Power Sprayer</td>
+<td><a href="tel:9556677889">9556677889</a></td>
+<td>PODALAKUR</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>NAGARAJU</td>
+<td>Mini Tractor</td>
+<td><a href="tel:9887766554">9887766554</a></td>
+<td>KALIGIRI</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>RAHUL REDDY</td>
+<td>Combine Harvester</td>
+<td><a href="tel:9001122334">9001122334</a></td>
+<td>ATMAKUR</td>
+<td><div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></td>
+<td><textarea></textarea><br><button onclick="saveReview(this)">Submit</button><div class="review-display"></div></td>
+</tr>
+
+</table>
+
+<script>
+
+/* ⭐ STAR CLICK */
+
+document.querySelectorAll(".stars").forEach(box=>{
+  const stars = box.querySelectorAll("span");
+
+  stars.forEach((star,i)=>{
+    star.onclick = ()=>{
+      stars.forEach((s,j)=>{
+        s.classList.toggle("active", j <= i);
+      });
+    };
+  });
+});
+
+/* 💬 SAVE REVIEW */
+
+function saveReview(btn){
+  const td = btn.parentElement;
+  const text = td.querySelector("textarea").value;
+  const display = td.querySelector(".review-display");
+
+  if(text.trim() !== ""){
+    display.textContent = "User Review: " + text;
+  }
+}
+
+</script>
+
+</body>
+</html>
