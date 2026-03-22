@@ -118,3 +118,87 @@ footer{
   background:rgba(0,0,0,0.3);
   font-size:14px;color:#ccc;
 }
+/* 🔥 ULTRA PREMIUM GLASS BANNER */
+
+.ultra-banner{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:50px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:0 20px;
+
+  background:rgba(15,23,42,0.65);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(255,255,255,0.15);
+
+  color:#fff;
+  font-weight:600;
+  letter-spacing:1px;
+  overflow:hidden;
+
+  z-index:9999;
+}
+
+/* 🔴 LIVE DOT */
+
+.live-dot{
+  width:10px;
+  height:10px;
+  background:#ff2b2b;
+  border-radius:50%;
+  box-shadow:0 0 10px #ff2b2b;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{ transform:scale(1); opacity:1; }
+  50%{ transform:scale(1.6); opacity:.6; }
+  100%{ transform:scale(1); opacity:1; }
+}
+
+/* SCROLL AREA */
+
+.banner-wrap{
+  overflow:hidden;
+  flex:1;
+  white-space:nowrap;
+}
+
+/* TEXT SCROLL */
+
+.banner-text{
+  display:inline-block;
+  padding-left:100%;
+  animation:premiumScroll 18s linear infinite;
+
+  background:linear-gradient(90deg,#fff,#00eaff,#fff);
+  background-size:200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Shine effect */
+
+@keyframes premiumScroll{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-100%); }
+}
+
+/* Pause on hover */
+
+.ultra-banner:hover .banner-text{
+  animation-play-state:paused;
+}
+
+/* Push content below banner */
+
+.container{
+  margin-top:70px;
+}
