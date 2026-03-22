@@ -46,8 +46,3 @@ document.addEventListener("click", function firstClick(){
   speakMessage();
   document.removeEventListener("click", firstClick);
 });
-<script>
-function goBack() {
-  window.history.back();
-}
-</script>
