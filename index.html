@@ -2,77 +2,108 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <title>Work Force</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* 🔥 POPUP */
+#popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.popup-box{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+  width:80%;
+  max-width:300px;
+}
+
+.popup-box button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  background:#0072ff;
+  color:white;
+  border-radius:8px;
+}
+
+/* 🔙 Back button */
+.back-btn{
+  position:fixed;
+  top:10px;
+  left:10px;
+  background:#000;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+  z-index:1000;
+}
+</style>
+
 </head>
 
 <body>
- 
+
+<!-- 🔙 Back Button -->
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<!-- 🔥 POPUP -->
+<div id="popup">
+  <div class="popup-box">
+    <h3>⚠ Beta Version</h3>
+    <p>This site is under testing. Some features may not work properly. so yo can share your feedback to below mail id</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
 <div class="container">
 
 <header>
 <h1>WORK FORCE</h1>
 <p class="tagline">
-Where your Imagination meets reality • Your work in our hands.. end2end Labour services
+Where your Imagination meets reality • End-to-End Labour services
 </p>
 </header>
 
 <section class="icon-grid">
 
-<div class="icon-card" data-text="FARMING SERVICES"
-onclick="goPage('farming.html')">
+<div class="icon-card" onclick="goPage('farming.html')">
 <div class="icon">🌾🚜</div>
 </div>
 
-<div class="icon-card" data-text="CONSTRUCTION SERVICES"
-onclick="goPage('construction.html')">
+<div class="icon-card" onclick="goPage('construction.html')">
 <div class="icon">👷‍♂️</div>
 </div>
 
-<div class="icon-card" data-text="DAILY WORKS"
-onclick="goPage('daily.html')">
+<div class="icon-card" onclick="goPage('daily.html')">
 <div class="icon">💼⚒️</div>
 </div>
 
-<div class="icon-card" data-text="FEED BACK"
-onclick="goPage('feedback.html')">
+<div class="icon-card" onclick="goPage('booking.html')">
+<div class="icon">📅💳</div>
+</div>
+
+<div class="icon-card" onclick="goPage('feedback.html')">
 <div class="icon">📝</div>
 </div>
 
 </section>
 
-<div id="infoText">Hover an icon</div>
-
-<!--  CONTACT -->
-
-<div class="contact">
-<h2>Contact</h2>
-
- Email:
-<a href="mailto:mbkodipunjula@gmail.com">
-mbkodipunjula@gmail.com
-</a>
-<br>
-
- Mobile:
-<a href="tel:9160965667">
-9160965667
-</a>
 </div>
-
-</div>
-
-<!-- 🔥 Loader -->
-
-<div id="loader">
-<img src="https://raw.githubusercontent.com/websitee199/mahi-website/main/abc.png">
-</div>
-
-<!-- 🤖 Chatbot Avatar -->
-
-<!--<div id="bot" onclick="speakMessage()">🤖</div>-->
 
 <footer>
 © 2026 All Rights Reserved — Mahesh Babuk
@@ -80,18 +111,15 @@ mbkodipunjula@gmail.com
 
 <script src="script.js"></script>
 
+<script>
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+
+function goBack(){
+  window.history.back();
+}
+</script>
+
 </body>
-  <!-- 🔥 ULTRA PREMIUM LIVE BANNER -->
-
-<div class="ultra-banner">
-
-  <div class="live-dot"></div>
-
-  <div class="banner-wrap">
-    <div class="banner-text">
-      🚀 Welcome to WORK FORCE • Your search ends here • End-to-End Labour Services • Farming • Construction • Daily Works • Trusted • Fast • Reliable 🚀
-    </div>
-  </div>
-
-</div>
 </html>
